@@ -1,34 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | IP Address Tracker</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | IP Address Tracker</title>
+  </head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  IP Address Tracker
-
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <body>
+    <div class="page-wrapper">
+      <main class="main-content">
+        <header class="page-header">
+          <h1 class="page-header__heading">IP Address Tracker</h1>
+          <form class="search" action="" method="post">
+            <div class="search__wrapper">
+              <input
+                class="search__input"
+                type="text"
+                placeholder="Search for any IP address or domain"
+                value="192.212.174.101"
+              />
+              <button class="search__button" type="submit">
+                <img src="./images/icon-arrow.svg" alt="" class="chevron" />
+              </button>
+            </div>
+          </form>
+          <article class="results">
+            <h2 class="hidden">search results</h2>
+            <div class="cell">
+              <span class="label">IP Address</span>
+              <span class="result">192.212.174.101</span>
+            </div>
+            <div class="cell">
+              <span class="label">Location</span>
+              <span class="result">Brooklyn, NY 10001</span>
+            </div>
+            <div class="cell">
+              <span class="label">Timezone</span>
+              <span class="result">UTC -05:00</span>
+            </div>
+            <div class="cell">
+              <span class="label">ISP</span>
+              <span class="result">SpaceX Starlink</span>
+            </div>
+          </article>
+        </header>
+      </main>
+      <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >.
+        <!-- TODO: correct my github page address -->
+        Coded by <a href="#">Omid Heidarzadeh</a>.
+      </footer>
+    </div>
+  </body>
 </html>

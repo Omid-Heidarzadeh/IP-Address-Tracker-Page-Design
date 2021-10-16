@@ -12,6 +12,7 @@ html {
 }
 
 body {
+  color: $dark-gray;
   margin: 0;
   padding: 0;
 }
@@ -21,6 +22,107 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  left: -10000px;
+}
+
+// ===== Page Header ======
+.page-header {
+  background: center / cover url("../images/pattern-bg.png");
+  height: 300px;
+  text-align: center;
+  overflow: visible;
+  padding: 28px 24px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.page-header__heading {
+  color: #fff;
+  font: {
+    size: 2.5rem;
+    weight: 500;
+  }
+  padding-top: 0;
+  margin-top: 0;
+}
+
+// ===== Search bar ======
+.search__wrapper {
+  border-radius: 15px;
+  display: flex;
+  height: 58px;
+  margin: 30px 0 24px;
+  overflow: hidden;
+  background-color: red;
+}
+
+.search__input {
+  border: none;
+  flex: auto;
+  font: {
+    family: $font-family;
+    size: 1.8rem;
+    weight: 400;
+  }
+  line-height: 1.5;
+  vertical-align: middle;
+  padding: 24px;
+}
+
+.search__button {
+  background-color: #000;
+  border: none;
+  flex: 0 0 58px;
+}
+
+// ====== Search Results ======
+.results {
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 25px 0 25px;
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 32px;
+  row-gap: 7px;
+}
+
+.label {
+  font: {
+    size: 1rem;
+    weight: 700;
+  }
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.result {
+  padding: 0;
+  margin: 0;
+  color: $very-dark-gray;
+  font: {
+    size: 2rem;
+    weight: 500;
+  }
+}
+
 // ===== Attribution ======
 .attribution {
   font-size: 11px;

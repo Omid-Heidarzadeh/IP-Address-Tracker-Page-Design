@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <title>Frontend Mentor | IP Address Tracker</title>
     <link
       rel="icon"
       type="image/png"
@@ -12,7 +12,17 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Frontend Mentor | IP Address Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
   </head>
 
   <body>
@@ -26,7 +36,7 @@
                 class="search__input"
                 type="text"
                 placeholder="Search for any IP address or domain"
-                value="192.212.174.101"
+                value=""
               />
               <button class="search__button" type="submit">
                 <img src="./images/icon-arrow.svg" alt="" class="chevron" />
@@ -37,31 +47,32 @@
             <h2 class="hidden">search results</h2>
             <div class="cell">
               <span class="label">IP Address</span>
-              <span class="result">192.212.174.101</span>
+              <span id="ip" class="result">-</span>
             </div>
             <div class="cell">
               <span class="label">Location</span>
-              <span class="result">Brooklyn, NY 10001</span>
+              <span id="location" class="result">-</span>
             </div>
             <div class="cell">
               <span class="label">Timezone</span>
-              <span class="result">UTC -05:00</span>
+              <span id="timezone" class="result">-</span>
             </div>
             <div class="cell">
               <span class="label">ISP</span>
-              <span class="result">SpaceX Starlink</span>
+              <span id="isp" class="result">-</span>
             </div>
           </article>
         </header>
+        <div id="map"></div>
       </main>
       <footer class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >.
-        <!-- TODO: correct my github page address -->
-        Coded by <a href="#">Omid Heidarzadeh</a>.
+        Coded by <a href="https://github.com/Omid-Heidarzadeh">Omid Heidarzadeh</a>.
       </footer>
     </div>
+    <script type="module" src="./scripts/script.js"></script>
   </body>
 </html>

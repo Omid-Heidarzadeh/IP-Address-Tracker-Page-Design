@@ -163,9 +163,10 @@ body {
   }
 }
 
-.map {
-  background-color: chocolate;
+#map {
+  // background-color: chocolate;
   flex: 1;
+  z-index: 0;
 }
 
 // ===== Attribution ======

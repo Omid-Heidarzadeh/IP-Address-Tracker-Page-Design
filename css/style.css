@@ -84,10 +84,17 @@ body {
   vertical-align: middle;
   padding: 24px;
 }
+.page-header .search__wrapper .search__input:hover {
+  cursor: pointer;
+}
 .page-header .search__wrapper .search__button {
   background-color: #000;
   border: none;
   flex: 0 0 58px;
+}
+.page-header .search__wrapper .search__button:hover {
+  background-color: #2b2b2b;
+  cursor: pointer;
 }
 .page-header .results {
   background-color: #fff;

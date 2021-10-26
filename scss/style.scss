@@ -84,11 +84,18 @@ body {
       line-height: 1.5;
       vertical-align: middle;
       padding: 24px;
+      &:hover {
+        cursor: pointer;
+      }
     }
     .search__button {
       background-color: #000;
       border: none;
       flex: 0 0 58px;
+      &:hover {
+        background-color: $very-dark-gray;
+        cursor: pointer;
+      }
     }
   }
 
